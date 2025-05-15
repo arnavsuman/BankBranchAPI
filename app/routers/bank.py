@@ -1,12 +1,33 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from .. import models, schemas
-
+from fastapi.responses import HTMLResponse
 from ..database import get_db
 import sqlite3
 
 router = APIRouter()
 
+
+@router.get("/", response_class=HTMLResponse)
+def read_root():
+    return """
+    <html>
+        <head>
+            <title>BankPAI</title>
+        </head>
+        <body style="font-family: Arial, sans-serif; text-align: center; padding: 50px;">
+            <h1>Welcome to <span style="color:#2a9d8f;">BankBranchAPI</span> </h1>
+            <p>Explore bank branches in India.</p>
+            <p>based on the unwieldy (too big) excel file from <a href="http://rbidocs.rbi.org.in/rdocs/content/docs/68774.xls">RBI</a> </p>
+            <p><strong>Endpoints:</strong></p>
+            <ul style="list-style-type: none;">
+                <li><a href="/branches">/branches</a> - List/search branches</li>
+                <li><a href="/branches/ABHY0065001">/branches/{ifsc-code}</a> - Get branch by IFSC Code</li>
+            </ul>
+            <h2> © 2025 Arnav Suman. All rights reserved. Created as part of a take-home assignment.</h2>
+        </body>
+    </html>
+    """
 @router.get("/branches/{ifsc}", response_model=schemas.BranchSchema)
 def get_branch(ifsc: str, db: Session = Depends(get_db)):
     branch = db.query(models.Branch).filter(models.Branch.ifsc == ifsc).first()
