@@ -83,10 +83,15 @@ python -m pytest tests/test_api.py
 The API is hosted on Render using Gunicorn + Uvicorn workers.
 
 Home Page - [https://bankbranchapi.onrender.com](https://bankbranchapi.onrender.com)
+
 Branch List - [https://bankbranchapi.onrender.com/branches](https://bankbranchapi.onrender.com/branches)
+
 Branch  by IFSC Code - [https://bankbranchapi.onrender.com/branches/ABHY0065001](https://bankbranchapi.onrender.com/branches/ABHY0065001)
+
 Branches by city - [https://bankbranchapi.onrender.com/branches?city=MUMBAI](https://bankbranchapi.onrender.com/branches?city=MUMBAI)
+
 Paginated Branches list - [https://bankbranchapi.onrender.com/branches?limit=10&offset=0](https://bankbranchapi.onrender.com/branches?limit=10&offset=0)
+
 Combined filters - [https://bankbranchapi.onrender.com/branches?city=MUMBAI&limit=10](https://bankbranchapi.onrender.com/branches?city=MUMBAI&limit=10)
 
 ---
