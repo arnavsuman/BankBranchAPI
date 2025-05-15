@@ -16,7 +16,6 @@ BankPAI is a FastAPI-powered REST API for retrieving branch details of Indian ba
 
 ## Endpoints
 
-------------------------------------------------------------------------------------
 | Method | Endpoint                          | Description                         |
 |--------|-----------------------------------|-------------------------------------|
 | GET    | `/`                               | Welcome homepage                    |
@@ -24,7 +23,7 @@ BankPAI is a FastAPI-powered REST API for retrieving branch details of Indian ba
 | GET    | `/branches?city=MUMBAI`           | Search branches by city             |
 | GET    | `/branches?limit=10&offset=0`     | Paginated branches list             |
 | GET    | `/branches?city=MUMBAI&limit=10`  | Combined filters                    |
-------------------------------------------------------------------------------------
+
 
 ##  Local Installation
 
