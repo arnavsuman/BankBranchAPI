@@ -47,7 +47,7 @@ uvicorn app.main:app --reload
 ```
 ---
 
-Then visit 
+### Then visit 
 
 Swagger UI:
 ```bash
@@ -61,7 +61,7 @@ http://127.0.0.1:8000/
 ---
 
 ## RUNNING TESTS
-Tests are located in the tests/ directory.  test file: test_api.py
+Tests are located in the bankbranchapi/tests/test_api.py
 
 ### To run tests:
 
@@ -80,6 +80,13 @@ python -m pytest tests/test_api.py
 ## Deployment on Render
 
 The API is hosted on Render using Gunicorn + Uvicorn workers.
+
+Home Page - [https://bankbranchapi.onrender.com](https://bankbranchapi.onrender.com)
+[https://bankbranchapi.onrender.com/branches](https://bankbranchapi.onrender.com/branches)
+[https://bankbranchapi.onrender.com/branches/ABHY0065001](https://bankbranchapi.onrender.com/branches/ABHY0065001)
+[https://bankbranchapi.onrender.com/branches?city=MUMBAI](https://bankbranchapi.onrender.com/branches?city=MUMBAI)
+[https://bankbranchapi.onrender.com/branches?limit=10&offset=0](https://bankbranchapi.onrender.com/branches?limit=10&offset=0)
+[https://bankbranchapi.onrender.com/branches?city=MUMBAI&limit=10](https://bankbranchapi.onrender.com/branches?city=MUMBAI&limit=10)
 
 ---
 # Made by Arnav Suman.
