@@ -24,7 +24,7 @@ def read_root():
                 <li><a href="/branches">/branches</a> - List/search branches</li>
                 <li><a href="/branches/ABHY0065001">/branches/{ifsc-code}</a> - Get branch by IFSC Code</li>
             </ul>
-            <h2> © 2025 Arnav Suman. All rights reserved. Created as part of a take-home assignment.</h2>
+            <h2> © 2025 Arnav Suman. All rights reserved. </h2>
         </body>
     </html>
     """
