@@ -77,6 +77,8 @@ cd bankbranchapi
 python -m pytest tests/test_api.py
 ```
 
+![Test Case Pass Screenshot] (https://drive.google.com/file/d/1sYbgqqG9PYUlYIfrGCf1-XBzUzNf7ovk/view?usp=sharing)
+
 ---
 ## Deployment on Render
 
