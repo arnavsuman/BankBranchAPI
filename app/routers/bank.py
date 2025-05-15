@@ -8,7 +8,7 @@ import sqlite3
 router = APIRouter()
 
 
-@router.get("/", response_class=HTMLResponse)
+@router.get("/", response_class=HTMLResponse)         #Handles /  request also called Home Page request
 def read_root():
     return """
     <html>
@@ -28,14 +28,17 @@ def read_root():
         </body>
     </html>
     """
-@router.get("/branches/{ifsc}", response_model=schemas.BranchSchema)
+
+
+@router.get("/branches/{ifsc}", response_model=schemas.BranchSchema)         #Handles /brancehs/{ifsc} request
 def get_branch(ifsc: str, db: Session = Depends(get_db)):
     branch = db.query(models.Branch).filter(models.Branch.ifsc == ifsc).first()
     if not branch:
         raise HTTPException(status_code=404, detail="Branch not found")
     return branch
 
-@router.get("/branches")
+
+@router.get("/branches")    #Handles /brancehs request
 def list_branches(
     bank_name: str = Query(None),
     city: str = Query(None),
