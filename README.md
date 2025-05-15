@@ -19,6 +19,7 @@ BankPAI is a FastAPI-powered REST API for retrieving branch details of Indian ba
 
 ## Endpoints
 
+------------------------------------------------------------------------------------
 | Method | Endpoint                          | Description                         |
 |--------|-----------------------------------|-------------------------------------|
 | GET    | `/`                               | Welcome homepage                    |
@@ -26,7 +27,7 @@ BankPAI is a FastAPI-powered REST API for retrieving branch details of Indian ba
 | GET    | `/branches?city=MUMBAI`           | Search branches by city             |
 | GET    | `/branches?limit=10&offset=0`     | Paginated branches list             |
 | GET    | `/branches?city=MUMBAI&limit=10`  | Combined filters                    |
-
+------------------------------------------------------------------------------------
 ---
 
 ##  Local Installation
@@ -63,7 +64,7 @@ http://127.0.0.1:8000/
 
 
 ## RUNNING TESTS
-Tests are located in the tests/ directory.  test file: test_api.p
+Tests are located in the tests/ directory.  test file: test_api.py
 
 ### To run tests:
 
@@ -77,3 +78,12 @@ cd bankbranchapi
 ```bash
 python -m pytest tests/test_api.py
 ```
+
+
+## Deployment on Render
+
+The API is hosted on Render using Gunicorn + Uvicorn workers.
+
+
+# Made by Arnav Suman.
+For queries or contributions, feel free to open an issue or a pull request.
