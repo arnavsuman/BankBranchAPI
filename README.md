@@ -5,7 +5,6 @@ BankPAI is a FastAPI-powered REST API for retrieving branch details of Indian ba
 ### 🌐 Hosted Live On Render
 🔗 [https://bankbranchapi.onrender.com](https://bankbranchapi.onrender.com)
 
----
 
 ## Features
 
