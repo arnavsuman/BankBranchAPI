@@ -7,7 +7,7 @@ BankPAI is a FastAPI-powered REST API for retrieving branch details of Indian ba
 
 ---
 
-## 🚀 Features
+## Features
 
 - Get branch details using IFSC code
 - Search branches by city or with pagination
@@ -17,7 +17,7 @@ BankPAI is a FastAPI-powered REST API for retrieving branch details of Indian ba
 
 ---
 
-## 🗂️ Endpoints
+## Endpoints
 
 ------------------------------------------------------------------------------------
 | Method | Endpoint                          | Description                         |
@@ -30,7 +30,7 @@ BankPAI is a FastAPI-powered REST API for retrieving branch details of Indian ba
 ------------------------------------------------------------------------------------
 ---
 
-## 🛠️ Local Installation
+##  Local Installation
 
 ### 1. Clone the Repository
 
@@ -38,4 +38,43 @@ BankPAI is a FastAPI-powered REST API for retrieving branch details of Indian ba
 git clone https://github.com/yourusername/bankbranchapi.git
 cd bankbranchapi
 ```
-### 1.  Install Requirements
+### 2.  Install Requirements
+```bash
+pip install -r requirements.txt
+```
+### 3. Ensure .db File Is Present
+
+Place indian_banks.db inside the root or app directory (where the code looks for it).
+
+### 3. All Set. Run the API Locally
+```bash
+uvicorn app.main:app --reload
+```
+Then visit 
+Then visit:
+
+Swagger UI:
+```bash
+http://127.0.0.1:8000/docs
+```
+Root Page: 
+```bash
+http://127.0.0.1:8000/ 
+```
+
+
+## RUNNING TESTS
+Tests are located in the tests/ directory.  test file: test_api.p
+
+### To run tests:
+
+### 1. Go to root folder 
+
+```bash
+cd bankbranchapi
+```
+### 2. Execute
+
+```bash
+python -m pytest tests/test_api.py
+```
