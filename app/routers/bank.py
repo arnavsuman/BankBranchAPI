@@ -13,7 +13,7 @@ def read_root():
     return """
     <html>
         <head>
-            <title>BankPAI</title>
+            <title>BankBranchAPI</title>
         </head>
         <body style="font-family: Arial, sans-serif; text-align: center; padding: 50px;">
             <h1>Welcome to <span style="color:#2a9d8f;">BankBranchAPI</span> </h1>
